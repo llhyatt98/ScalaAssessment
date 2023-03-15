@@ -15,6 +15,7 @@ Things I would have done if I had more time:
 - Better data typing: I focused on functionality over TypeScript interfacing, but if I had more time I would have added interfaces starting with the scala-api.ts and through the App components. This would include dedicated typing for what a hiker and bridge should look like.
 - Performace: From my initial testing I believe the algorithm should function, but I would love to spend more time on decreasing complexity and trying to improve performance. This would only become an issue with a large number of bridges and hikers.
 - Ability to delete bridges or hikers 
+- Documentation
 
 
 
