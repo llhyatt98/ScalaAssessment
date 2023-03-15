@@ -1,3 +1,23 @@
+# Notes:
+Strategy:
+I added a method for calculating overall time and times for each bridge. The approach was as follows:
+- Iterate over each bridge
+- Take into account the additional hikers for that bridge, add them to the current group of hikers
+- Sort hikers by speed, and if there are multiple hikers move in teams of two starting with the slowest
+- Include overall time and individual bridge times
+
+- From a UI standpoint, I wanted to keep it as simple as possible while adding functionality to add more hikers and bridges
+
+Things I would have done if I had more time:
+- Testing. Due to time constraints, I was limited in providing testing. This is a great opportunity to spin up some unit tests for an expected solution and base cases.
+- Handling edge cases: I tried to handle these but its not bullet proof. You can't add hikers with 0 speed, or bridges with 0 length. I'm sure with more testing I may have missed something.
+- Better redux architecture: I was moving fast so my reducers are a little messy. I would have moved some of the postHiker/postBridge logic into the redux middleware. My approach was simplest given the time constraints.
+- Better data typing: I focused on functionality over TypeScript interfacing, but if I had more time I would have added interfaces starting with the scala-api.ts and through the App components. This would include dedicated typing for what a hiker and bridge should look like.
+- Performace: From my initial testing I believe the algorithm should function, but I would love to spend more time on decreasing complexity and trying to improve performance. This would only become an issue with a large number of bridges and hikers.
+- Ability to delete bridges or hikers 
+
+
+
 # Scala Full Stack Take-Home Challenge:
 Write a program that simulates a team hiking through a forest at night. The team encounters a
 series of narrow bridges along the way. At each bridge they may meet additional hikers who
