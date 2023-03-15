@@ -4,15 +4,18 @@ import './index.css';
 import App from './App';
 import reportWebVitals from './reportWebVitals';
 import {worker} from "./mocks/browser";
+import { Provider } from "react-redux";
+import { store } from './store';
 
 worker.start({
     onUnhandledRequest: "bypass"
 })
 .then(() => {
-
     ReactDOM.render(
         <React.StrictMode>
-            <App/>
+            <Provider store={store}>
+                <App/>
+            </Provider>
         </React.StrictMode>,
         document.getElementById('root')
     );
